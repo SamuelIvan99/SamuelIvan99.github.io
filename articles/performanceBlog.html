@@ -1,0 +1,155 @@
+<!DOCTYPE html lang="en">  
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Samuel Ivan">
+        <meta name="description" content="My personal portfolio">
+        <meta name="keywords" content="CV, projects, blog, skills">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Increasing Performance | Unity3D</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="articles">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="../index.html#about-me">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../index.html#projects">Projects</a>
+                <a class="nav-item nav-link" href="../blog.html">Blog</a>
+                <a class="nav-item nav-link" href="../index.html#education">Education</a>
+                <a class="nav-item nav-link" href="../index.html#certifications">Certifications</a>
+                <a class="nav-item nav-link" href="../index.html#skills">Skills</a>
+                <a class="nav-item nav-link" href="../index.html#technology">Technologies</a>
+                <a class="nav-item nav-link" href="../index.html#contact">Contact</a>
+              </div>
+            </div>
+        </nav>
+
+        <section class="container margin-bottom">
+            <div class="col-12">
+                <h1 class="display-4 text-center">Increasing Performance in Unity3D</h1>
+                <hr>
+                <div class="blog-section">
+                    <h1> Introduction </h1>
+                    <p> Hello everyone!
+                        My name is Samuel and this is my first article I have ever created and published. Since I did not have a lot of ideas what to write about, 
+                        I decided to describe you some problems I have encountered during the development of my game for Android - 
+                        <a href="https://play.google.com/store/apps/details?id=com.SIGames18.CometRun" target="_blank">CometRun</a>, 
+                        which I have published on Google Play Store, and offer you some tips and tricks how to solve those particular problems.
+                        I will also provide you with resources I have used when I was solving those issues.   
+                    </p>
+                    <h1> Aimed At </h1>
+                    <p> I am a beginner programmer and developer learning IT in my free time, so this article is aimed at people who are beginners as well or
+                        they have experienced similar issues as I did. All the others are also welcome to read my blog, but it will not be as informative 
+                        for you as for the group I mentioned.  
+                    </p>
+                    <h1> Tools for analysing problems </h1>
+                    <p>
+                        <img src="./PerformanceBlog_images/profiler_img.PNG" alt="html code"/>
+                    </p>
+                    <p> Before I begin to write about specific issues I have experienced during the development, I would like to show you how to discover and
+                        further analyse those partical problems with tools that can really help you provide neccessary information about your performance problems.
+                        Here I will only talk about one tool which is the profiler window provided in Unity3D, but for more information about tools, performance tips and
+                        tricks for Mobile applications you can watch <a href="https://www.youtube.com/watch?v=j4YAY36xjwE" target="_blank">this</a> 
+                        video which was also created by Unity3D.
+                        The Unity Profiler Window helps you to optimize your game. It reports for you how much time is spent in the various areas of your game. 
+                        For example, it can report the percentage of time spent rendering, animating or in your game logic. You can record your data when game is
+                        in play mode. The more time specific action consumes, the more focus you should provide to this action. So, if you see any areas that spike
+                        more than others you should pay more attention to them and optimize them for better game performance.<br/>
+                        <br/><b>My advice:</b> You should mainly focus on CPU Usage, Rendering, Memory and Audio in the Profiler Window, but this is only from my own experience.<br/>
+                        <br/>For more information about the Profiler Window and tools for optimizing your games click on the links below.<br/>
+                        <a href="https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity1.html" target="_blank">Profiling tools used for specific platforms</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity2.html" target="_blank">Tool for memory profiling</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/ProfilerWindow.html" target="_blank">Profiler overview</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/ProfilerAudio.html" target="_blank">Audio profiler in the Profiler Window</a>
+                    </p>
+                    <h1> Too many vertices </h1>
+                    <p>
+                        <img src="./PerformanceBlog_images/vertices_img.jpg" alt="html code"/>
+                    </p>
+                    <p> First of all, one of most serious problem I had with CPU performance was rendering. I have discovered this problem thanks to the profiler window,
+                        since I could clearly see the spikes my game caused when the number of asteroids increased over time. My asteroids had too many vertices 
+                        on main scene which caused lagging. Because I have made those asteroids in <a href="https://www.blender.org/" target="_blank">Blender</a>, 
+                        I quickly solved this problem by decreasing the number of vertices in Blender environment. 
+                        The unwanted result was that my asteroids did not have so many details as the had before, but from the user perspective it was not so visible. 
+                        Generally speaking, you should aim for no more than 100,000 vertices on mobile devices. On the other hand, a PC manages well even 
+                        with several million vertices, but it is still good practice to keep this number as low as possible.<br/>
+                        <br/>For more information about optimizing graphics performance see the link below.<br>
+                        <a href="https://docs.unity3d.com/Manual/OptimizingGraphicsPerformance.html" target="_blank">Optimizing graphics performance</a>  
+                    </p>
+                    <h1> Script optimization </h1>
+                    <p>
+                        <img src="./PerformanceBlog_images/script_img.jpg" alt="html code"/>
+                    </p>
+                    <p> Another recommended advice is to optimize your scripts. I did not really have problems with my scripts, but I have learned a lot of great practices
+                        when I dived into the topic of optimizing scripts. A case in point can be <a href="https://www.youtube.com/watch?v=9-zDOJllPZ8" target="_blank">Object pooling</a>. 
+                        Object pooling is really helpful when you are creating/instantiating a lot of objects on the scene. 
+                        A game can really gain increase in performance after implementing this procedure.
+                        Using objects pooling is much faster than creating and destroying those objects and memory allocation is simpler. 
+                        Avoid also using foreach statements, multidimensional arrays, copying the same lines of code on multiple locations in a script - 
+                        there is object oriented programming for that, declaring null objects, using declaration statements in update function 
+                        (rather give them an exception so when a change occurs your value changes as well instead of replacing value every frame if you understand 
+                        what I mean by that, otherwise please read documentation on scripts optimization) and many others good practices.<br/> 
+                        <br/>For more information about optimizing scripts (includes Object pooling example) see the links below.
+                        <br/><a href="https://docs.unity3d.com/Manual/MobileOptimizationPracticalScriptingOptimizations.html" target="_blank">Optimizing scripts</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity8.html" target="_blank">Scripts optimization tips and tricks</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity7.html" target="_blank">General script optimization</a>
+                    </p>
+                    <h1> Audio </h1>
+                    <p>
+                        <img src="./PerformanceBlog_images/audioWave_img.jpg" alt="html code"/>
+                    </p>
+                    <p> To increase your performance and decrease the size of your game you should:
+                        <ol>
+                            <li>Force audio to mono</li>
+                            <li>Load it in background</li>
+                            <li>Choose appropraite Load Type - 
+                                <a href="http://blog.theknightsofunity.com/wrong-import-settings-killing-unity-game-part-2/" target="_blank">here</a>
+                                is a guide for this
+                            </li>
+                            <li>Override audio for a specific platform you are working with</li>
+                        </ol>
+                    </p>
+                    <h1> Texture compression </h1>
+                    <p>
+                        <img src="./PerformanceBlog_images/texture_img.jpg" alt="html code"/>
+                    </p>
+                    <p> And last, but not least there is texture compresion which also helps you reduce the size of your game and increase performance.
+                        In order to do that follow this steps:
+                        <ol>
+                            <li>Use crunch compression</li>
+                            <li>Override settings for a specific platform you are working with now</li>
+                            <li>Decrease the Max size of a texture in order to decrease the size of a texture</li>
+                        </ol>
+                        For more information about the size of your game you should go to Console window, click on Open Log Editor and find Build Report
+                        after building your project.
+                    </p>
+                    <h1> Resources </h1>
+                    <p> Finally, here are some other resources:
+                        <br/><a href="https://www.youtube.com/watch?v=LwwP6tWLm6A" target="_blank">Increase game performance</a>
+                        <br/><a href="https://divillysausages.com/2016/01/21/performance-tips-for-unity-2d-mobile/" target="_blank">Performance tips for mobile</a>
+                        <br/><a href="http://blog.theknightsofunity.com/wrong-import-settings-killing-unity-game-part-2/" target="_blank">Performance tips (import settings)</a>   
+                    </p>
+                    <h1> Conclusion </h1>
+                    <p> That is all I can provide you with. I hope you have learned something new and solved some of your issues using the guides and links I gathered
+                        here. Good luck with your projects! Thanks for reading this article and have a nice day!<br/>
+                        <br/><em>Date: 23.04.2019</em><br/><em>Author: Samuel Ivan</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created by Samuel Ivan - Copyright &copy; 2021</p>
+        </footer>
+    </body>
+</html>

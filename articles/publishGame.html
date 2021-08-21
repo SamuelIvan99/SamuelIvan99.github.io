@@ -1,0 +1,230 @@
+<!DOCTYPE html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Samuel Ivan">
+        <meta name="description" content="My personal portfolio">
+        <meta name="keywords" content="CV, projects, blog, skills">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Publishing your first Unity3D Game</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="articles">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="../index.html#about-me">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../index.html#projects">Projects</a>
+                <a class="nav-item nav-link" href="../blog.html">Blog</a>
+                <a class="nav-item nav-link" href="../index.html#education">Education</a>
+                <a class="nav-item nav-link" href="../index.html#certifications">Certifications</a>
+                <a class="nav-item nav-link" href="../index.html#skills">Skills</a>
+                <a class="nav-item nav-link" href="../index.html#technology">Technologies</a>
+                <a class="nav-item nav-link" href="../index.html#contact">Contact</a>
+              </div>
+            </div>
+        </nav>
+
+        <section class="container margin-bottom">
+            <div class="col-12">
+                <h1 class="display-4 text-center">Publishing your first Unity3D Game</h1>
+                <hr>
+                <div class="blog-section">
+                    <h1> Introduction </h1>
+                    <p> In this tutorial I am going to show you how to publish your first Unity3D game on 
+                        <a href="https://play.google.com/store" target="_blank">Google Play Store</a>. 
+                        I will be using Android as my platform. I will walk you through
+                        the steps on how to sign your application in Unity3D and process of publishing your game on Google Play Console. 
+                        This procedure is quite easy and should not be hard to grasp even for complete beginners.
+                    </p>
+                    <h2><span class="badge badge-pill badge-primary">1. Step</span> Google Play Console registration</h2>
+                    <p>
+                        <img src="./PublishGame_images/googlePlayStore_img.png" alt="Google Play Store user interface"/>
+                    </p>
+                    <p> First of all, you need to register into <a href="https://developer.android.com/distribute/console/" target="_blank">Google Play Console</a> using your
+                        existing google account. You will be obliged to fill some forms, accept few agreements and pay one time fee of 25 dollars. Once you have done all the tasks, 
+                        you can use this account for unlimited period of time and publish unlimited number of games, applications, books etc.
+                    </p>
+                    <h2><span class="badge badge-pill badge-primary">2. Step</span> Building & Signing your application</h2>
+                    <p>Once you have completed the develpomnet stage of your game, it is time to move on the publication process. You can start by opening 
+                        player settings in Unity3D (path - Edit/Project Settings/Player). Firstly, at the top you can see Company Name, Product Name, Default icon, ...<br/>
+                        <br/>What you need to change:<br/>
+                        <b>Company Name: </b>Create your own unique company name. It will be displayed in Google Play Store as the creator of the game.<br/>
+                        <b>Product Name: </b>Again create your own unique name of the game. String should not be too long.<br/>
+                        <b>Default Icon: </b>Pick the 2D texture for your game.<br/>
+                        You can also play with other setting, but the ones above are the most important.
+                        Now make sure that you have chosen settings for Android or whatever platform you are using, so you will not have any problems later on.<br/>
+                    </p>
+                    <h3>Icon</h3>
+                    <p>
+                        <b>Adaptive icons: </b>Set adaptive icon textures in your game for different resolutions.<br/>
+                        <b>Round icons: </b>Set round icon textures in your game for different resolutions.<br/>
+                        <b>Legacy icons: </b>Set legacy icon textures in your game for different resolutions.<br/>
+                        If you are building your game for Android TV as well, then you can Enable Android Banner and choose the specified texture.
+                    </p>
+                    <h3>Resolution and Presentation</h3>
+                    <p> My usual setup:<br/>
+                        <b>Preserve framebuffer alpha: </b>Disabled<br/>
+                        <b>Resolution scaling mode: </b>Disabled<br/>
+                        <b>Blit type: </b>Always<br/>
+                        <b>Aspect ratio mode: </b>Native aspect ratio<br/>
+                        <b>Default Orientation: </b>I usually have Auto Rotation, but this one depends on the game you are creating.<br/>
+                        <b>Use 32-bit Display Buffer: </b>Enabled<br/>
+                        <b>Disable Depth and Stencil: </b>Disabled<br/>
+                        <b>Show Loading Indicator: </b>Don't show<br/>
+                    </p>
+                    <h3>Splash Image</h3>
+                    <p>
+                        In Splash Image Section you just have to look around, play with different effects, animations and choose your own textures for the game.
+                        <br/>I personally set mostly these options:<br/>
+                        <b>Logo</b> with Logo duration 2 sec.<br/>
+                        <b>Background Image</b><br/>
+                        <b>Static Splash Image</b> which is displayed when you game is loading as well as your background image and logo if you selected one.<br/>
+                    </p>
+                    <h3>Other Settings</h3>
+                    <p>
+                        Now because here are displayed quite a lot of options, I am going to focus on those I usually change and the crucial ones. You should leave
+                        the others in their default values or if you want to play with them you can find more information about their descriptions at the end of Step 2.<br/>
+                        <b>Static Batching: </b>Enabled<br/>
+                        <b>Dynamic Batching: </b>Enabled<br/>
+                        <br/>If you want to publish your game on Google Play Store, you need to set up the following settings.<br/>
+                        <b>Package Name (Important): </b>Uniquely identifies your app on the device and in Google Play Store. 
+                        The basic structure of the identifier is com.CompanyName.AppName.<br/>
+                        <b>Version (Important): </b>1.0<br/>
+                        <b>Bundle Version Code (Important): </b>It is an integer number which usually starts at 1, but you can choose your own value.
+                        Every time you make an update or release a new version of the game you must increase this number in order to determine which 
+                        version is the most recent.<br/>
+                        <b>Minimum API Level (Important): </b>How many devices you want to target.<br/>
+                        <b>Target API Level (Important): </b>Usually is set to Automatic<br/>
+                        <br/>Last but not least, there is Optimization section which is very important in case you game is bigger than expected. In that case most developers
+                        usually Preload their Assets.
+                    </p>
+                    <h3>Publishing Settings</h3>
+                    <p> Yet another quite significant part of publication process is in Publishing Settings. Here you need to create storage for your keys to games called
+                        Keystore. Then you will create key for your game and save it in the Keystore. You must not loose your keystore, otherwise you will not be able to
+                        update the games you published later on.<br/>
+                        <br/>1. Create new keystore and browse a good location on your PC, so that you will not forget about it and where it will be save as well.
+                        <br/>2. Create password for your keystore.
+                        <br/>3. Create new key with which you can sign your game.
+                        <br/>4. Create password for your key. It should be unique and solely for this game.
+                        <br/>5. Select your key from Alias dropdown and confirm the password for the key.
+                    </p>
+                    <h3>XR Settings</h3>
+                    <p>
+                        Since I am not using so often Extended Reality, then I usually leave these setting be in their default values.
+                    </p>
+                    <p> For more information click here: <br/>
+                        <a href="https://docs.unity3d.com/Manual/TroubleShootingAndroid.html" target="_blank">Troubleshooting</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/android-BuildProcess.html" target="_blank">Building apps</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/android-sdksetup.html" target="_blank">Android Environment Setup</a>
+                        <br/><a href="https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html" target="_blank">Android Player Settings</a>
+                    </p>
+                    <p>
+                        Final step is to go to File/Build Settings..., making sure you have switched the right platform and clicking on Build & Run. Once it finished building
+                        your game, you will have your signed apk file which we can therefore upload on Google Play Store.
+                    </p>
+                    <h2><span class="badge badge-pill badge-primary">3. Step</span> Publishing your application</h2>
+                    <p>
+                        <img src="./PublishGame_images/step3_1.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        1. Click on <em>Create Application</em> button.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_2.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        2. Choose your default language and title for your game.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_3.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        Now on the left side there is a panel out of which <em>App releases, Store listing, Content rating and Pricing & distribution</em> buttons are the
+                        most important. Next to them you can also see unchecked marks which must be green if you want to publish your game.
+                    </p>
+                    <p>
+                        3. Go to <em>Store listing</em> and fill out <em>Short and Full description</em> of your game so that you can move on <em>Graphic assets</em>.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_5.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        4. <em>Graphic assets</em> - Here you need to include <em>Hi-res icon, Screenshots for whichever device you want (at least 2) and Feature graphic.</em> 
+                        You can see the specific size of an image below. You can also add other images, icons or videos if have some, but the one mentioned earlier
+                        are required.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_8.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        5. <em>Categorisation</em> - According to the game you have created fill out <em>Application Type and Category</em>. Then you need to rate your
+                        game, so click on <em>Content rating</em> that is on the left side panel. After you have answer all the questions and checked everything you will
+                        get certficate.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_9.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        6. <em>Contact Details</em> - If you have your own website for the game you can add your link there, otherwise you only need to specify your email.
+                    </p>
+                    <p>
+                        7. <em>Privacy Policy</em> - If you gather any information about user or have Personalized ads, you must add links to a Privacy Policy webpage. You
+                        can create your Privacy Policy <a href="https://app-privacy-policy-generator.firebaseapp.com/" target="_blank">here</a> and publish it on
+                        <a href="https://www.blogger.com/" target="_blank">Blogger</a>.<br/>
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_11.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        8. <em>Pricing & Distribution</em> - Define whether you application is paid or free and in Countries Status bar click on Available which makes your game
+                        available in the countries listed there. If you want to restrict the usage of your game in some countries, you can make it unavailable in those specific countries.
+                        Next, answer the question whether your app is <em>Primarily Child-Directed and Contains ads.</em> Last but not least, in the <em>Consent</em> section check
+                        the <em>Consent guidelines and US export laws.</em> Finally, save your draft, so you will not loose any changes that has been made.
+                    </p>
+                    <p>
+                        By now you should have 3 out of 4 green marks. Therefore we move to our final stage, which is <em>App release</em>.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_16.png" alt="Google Play Store Image"/>
+                    </p>
+                    <p>
+                        9. <em>App releases</em> - First of all, you need to choose the right track (Production, Beta - used for testing, ...). Then click on <em>Create Release and Continue</em>,
+                        so that you can upload your apk file which we have create with Unity3D earlier in this tutorial. Finally, browse and upload your apk file, enter a
+                        <em>Release name</em> and write what is new in this release. Click on <em>Review</em> and in couple of hours your game should be officially published on
+                        Google Play Store.
+                    </p>
+                    <p>
+                        <img src="./PublishGame_images/step3_18.png" alt="Google Play Store Image"/>
+                    </p>
+                    <h2><span class="badge badge-pill badge-primary">4. Step</span> Updating your application</h2>
+                    <p> If you want to update your game, there are 2 key steps you have to follow. <br/>
+                        1. Go to Unity3D and in Player Settings you have to update <b>Version</b> and <b>Bundle Version Code</b>. Build & Run your game again, so that you will
+                        have your new apk file. <br/>
+                        2. Go to Google Play Console and follow this path <em>Release Management/App releases/Manage/Create Release</em>. Once again upload your new apk file, write
+                        what is new and <em>Review</em>. And you have updated your application.
+                    </p>
+                    <h1> Conclusion </h1>
+                    <p> I hope you have learned something new today and that this tutorial helped you move forward with your development. If you have any questions
+                        or you have experienced some problems during publication of your game, feel free to write me an email. You can find this information in 
+                        <a href="../about.html" target="_blank">about me</a> section.<br/>
+                        <br/><em>Date: 29.04.2019</em><br/><em>Author: Samuel Ivan</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created by Samuel Ivan - Copyright &copy; 2021</p>
+        </footer>
+    </body>
+</html>

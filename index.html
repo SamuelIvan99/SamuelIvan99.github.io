@@ -1,0 +1,429 @@
+<!DOCTYPE html lang="en">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Samuel Ivan">
+    <meta name="description" content="My personal portfolio">
+    <meta name="keywords" content="CV, projects, blog, skills">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | Samuel Ivan portfolio</title>
+    <script defer src="./fontawesome-free-5.14.0-web/js/all.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#about-me">Home</a>
+                <a class="nav-item nav-link" href="#projects">Projects</a>
+                <a class="nav-item nav-link" href="./blog.html">Blog</a>
+                <a class="nav-item nav-link" href="#education">Education</a>
+                <a class="nav-item nav-link" href="#certifications">Certifications</a>
+                <a class="nav-item nav-link" href="#skills">Skills</a>
+                <a class="nav-item nav-link" href="#technology">Technologies</a>
+                <a class="nav-item nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container bg-light-blue margin-bottom">
+        <!--
+            About me section
+            Photo + some short description
+        -->
+        <section id="about-me">
+            <h1 class="display-4 text-center">Profile</h1>
+            <hr>
+            <div class="row text-center">
+                <h5 class="col-md-6 item-padding">
+                    <strong>MOTIVATION:</strong>
+                    <br>
+                    Being able to contribute to creating software that will make positive impact on people's lives is one of the reasons
+                    I became interested in programming and studying technology. Creating software applications that can help people, animals, or the environment
+                    is something I aim for. World of technology is always improving vastly and being able to support this development is quite exciting.
+                    My goal in life is to leave something behind that can help people became the best version of themselves, connect with others that share their passions, or
+                    help solve some of the environmental problems.
+                    <br>
+                    <br>
+                    <strong>HOBBIES:</strong>
+                    <br>
+                    I like running, sports, occasionally play chess and usually relax by watching TV series & movies.
+                    I also love reading books from different genres like technology, finance, personal growth, psychology, fantasy ...
+                    Every day I try to improve myself by learning something new and try to grow as a person.
+                </h5>
+                <div class="col-md-6 item-padding">
+                    <img src="./images/myFoto.jpg">
+                </div>
+            </div>
+            <h5 class="col-12 text-center mr-5">
+                <strong>LIFE QUOTE:</strong>
+                <br>
+                <q>Success is something you attract by the person you become.</q> - Jim Rohn
+            </h5>
+        </section>
+
+        <!--
+            Projects section
+            Timeline of my projects + links on Github, Google Play Store, Videos, Picture + small description
+        -->
+        <section id="projects">
+            <h1 class="display-4 text-center">Projects</h1>
+            <hr>
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <a href="./projects/sPortsProject.html" target="_blank">
+                        <div class="timeline-content"
+                            style="background-image: url('./images/marina.jpg'); background-size: cover;">
+                            <div class="sports-project">
+                                <h3>sPorts - Smart Ports</h3>
+                                <p>This project was part of my third semester assignment at UCN where with as a group we were tasked to
+                                    develop a distributed web as well as desktop application in .NET. We came up with an idea to create a software
+                                    for marina owners where they can add and manage their marinas and for boat owners where they can add their leisure
+                                    boats and book specific marinas that are part of our system.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline-container right">
+                    <a href="./projects/ticketSystemProject.html" target="_blank">
+                        <div class="timeline-content"
+                            style="background-image: url('./images/ticketOffice.jpg'); background-size: cover;">
+                            <div class="ticket-system-project">
+                                <h3>Support Ticket System</h3>
+                                <p>This project is part of my second semester assignment at UCN where with as a group of students
+                                    we were tasked to develop Java applications for a company which in our case was a polish company
+                                    Grast-MTB and the software is support ticket system for better handling of customer's questions, complaints, etc.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline-container left">
+                    <a href="https://play.google.com/store/apps/details?id=com.SIGames18.SkyRun" target="_blank">
+                        <div class="timeline-content"
+                            style="background-image: url('./images/sky.jpg'); background-size: cover;">
+                            <div class="skyrun-project">
+                                <h3>Sky Run (Unity3D game)</h3>
+                                <p>Sky Run is another Android game I have published on Google Play Store.
+                                    The game idea is similar to Comet Run, but now you play as a ball high in the
+                                    clouds.
+                                    You need to change positions swiftly and regurarly, because the cubes, you are
+                                    standing on,
+                                    fall after a few seconds.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline-container right">
+                    <a href="https://github.com/SamuelIvan99/esp8266-temperature" target="_blank">
+                        <div class="timeline-content"
+                            style="background-image: url('./images/nodeMcu.png'); background-size: cover;">
+                            <div class="temperature-project">
+                                <h3>Esp8266 Temperature Project</h3>
+                                <p>Simple project that uses temperature sensor with which you can measure temperature in
+                                    the room or outside, store the data from the sensor in a database and then display a
+                                    graph
+                                    with those values on a webpage.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline-container left">
+                    <a href="https://play.google.com/store/apps/details?id=com.SIGames18.CometRun" target="_blank">
+                        <div class="timeline-content"
+                            style="background-image: url('./images/comet.jpg'); background-size: cover;">
+                            <div class="cometrun-project">
+                                <h3>Comet Run (Unity3D game)</h3>
+                                <p>Comet Run is the first Android game I have published on Google Play Store.
+                                    It is a simple survival game made in Unity3D environment. You play as a comet and
+                                    try to avoid
+                                    asteroids that fly around you.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            Blog section
+        -->
+        <section id="blog">
+            <h1 class="display-4 text-center">Articles</h1>
+            <hr>
+            <div class="row item-padding">
+                <div class="card bg-white col-xs-12 col-sm-6 col-md-4">
+                    <img class="card-img-top" src="./articles/PerformanceBlog_images/graph_img.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Increasing Performance in Unity3D</h5>
+                            <p class="card-text">If you are working with Unity3D or trying to publish something on
+                                Google Play Store,
+                                here are some tips and tricks on how to increase performance and reduce the final size
+                                of your application.</p>
+                            <a href="./articles/performanceBlog.html" target="_blank" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+                <div class="card bg-white col-xs-12 col-sm-6 col-md-4">
+                    <img class="card-img-top" src="./articles/WebsiteBlog_images/website_img.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Creating your first website</h4>
+                        <p class="card-text">Are you trying to create your own website? Come and read about the
+                            different techniques on
+                            how to accomplish this goal, whether you are starting with Web Development or you just
+                            simply want to create a
+                            plain blog.
+                        </p>
+                        <a href="./articles/websiteBlog.html" target="_blank" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+                <div class="card bg-white col-xs-12 col-sm-6 col-md-4">
+                    <img class="card-img-top" src="./articles/PublishGame_images/Google_Play_Store_logo.svg">
+                    <div class="card-body">
+                        <h4 class="card-title">Publishing a game on Google Play Store</h4>
+                        <p class="card-text">Tutorial on how to create an account on Google Play Store and process of
+                            publishing (or updating)
+                            your Unity3D game there. It is easy to read and provided with pictures.
+                        </p>
+                        <a href="./articles/publishGame.html" target="_blank" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--
+            Education section
+            Timeline of my education + small description
+        -->
+        <section id="education" class="">
+            <h1 class="display-4 text-center">Education</h1>
+            <hr>
+            <div class="row border border-dark bg-info mt-3 rounded item-mr item-padding">
+                <img src="./images/Logos/ucn_logo.png" alt="UCN school logo">
+                <div class="col">
+                    <h4>University College of Northern Denmark (UCN)</h4>
+                    <h5>Aalborg, Denmark</h5>
+                    <p>
+                        September 2019 - January 2022
+                        <br>
+                        AP (Academy Profession) degree in Computer Science - 2 & 1/2 years
+                        <br>
+                        Subjects: Programming, System Development, Technology, Business
+                    </p>
+                </div>
+            </div>
+            <div class="row border border-dark bg-warning mt-3 rounded item-mr item-padding">
+                <img src="./images/Logos/gk2_logo.jpg" alt="GK2 school logo">
+                <div class="col">
+                    <h4>Gymnázium Konštantínová 2</h4>
+                    <h5>Prešov, Slovakia</h5>
+                    <p>
+                        September 2014 - June 2019
+                        <br>
+                        High School Graduation Diploma - 5 years
+                        <br>
+                        Bilingual study - English and German
+                        <br>
+                        Extracurricular activities: mathematics, sports, informatics
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Courses & Certifications section
+            list of my course certifications
+        -->
+        <section id="certifications">
+            <h1 class="display-4 text-center">Courses & Certifications</h1>
+            <hr>
+            <div class="row item-padding item-mr">
+                <div class="card bg-white col-sm-12 col-md-6 col-lg-4">
+                    <img class="card-img-top" src="./images/Logos/flutter_course_logo.png">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Flutter & Dart Course <br> Udemy</h5>
+                        <a href="./certifications/FlutterCertificate.pdf" target="_blank"
+                            class="btn btn-outline-success">View</a>
+                    </div>
+                </div>
+                <div class="card bg-white col-sm-12 col-md-6 col-lg-4">
+                    <img class="card-img-top" src="./images/Logos/worldquantuni_logo.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine Learning & Statistical Analysis</h5>
+                        <a href="https://wqu.thedataincubator.com/certificate/4594897113841664" target="_blank"
+                            class="btn btn-outline-success">View</a>
+                    </div>
+                </div>
+                <div class="card bg-white col-sm-12 col-md-6 col-lg-4">
+                    <img class="card-img-top" src="./images/Logos/worldquantuni_logo.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Scientific Computing & Python for Data Science</h5>
+                        <a href="https://wqu.thedataincubator.com/certificate/5037842010996736" target="_blank"
+                            class="btn btn-outline-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            Skills section
+            list of my skills + pictures / logos
+        -->
+        <section id="skills" class="text-center">
+            <h1 class="display-4">Skills</h1>
+            <hr>
+            <div class="row item-padding">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="http://www.tutorialspoint.com/csharp" target="_blank">
+                        <img class="skills-logo" src="./images/Logos/csharp-logo.png" alt="c# logo">
+                        <h3>C#</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://dart.dev/tutorials" target="_blank">
+                        <img class="skills-logo" src="./images/Logos/Dart-logo.png" alt="dart logo">
+                        <h3>Dart</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.tutorialspoint.com/html/index.htm" target="_blank">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.tutorialspoint.com/css/index.htm" target="_blank">
+                        <i class="fab fa-css3"></i>
+                        <h3>CSS</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.tutorialspoint.com/python3/index.htm" target="_blank">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.tutorialspoint.com/sql/index.htm" target="_blank">
+                        <i class="fas fa-database"></i>
+                        <h3>T-SQL</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+                        <i class="fab fa-js-square"></i>
+                        <h3>JavaScript</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            Technologies section
+            list of technologies I have experience with + pictures / logos
+        -->
+        <section id="technology" class="text-center">
+            <h1 class="display-4">Technologies</h1>
+            <hr>
+            <div class="row item-padding">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/" target="_blank">
+                        <i class="fas fa-code"></i>
+                        <h3>.NET Core</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://azure.microsoft.com/en-us/services/devops/" target="_blank">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Azure DevOps</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://flutter.dev/docs" target="_blank">
+                        <img class="skills-logo" src="./images/Logos/flutter_logo.png" alt="flutter logo">
+                        <h3>Flutter</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://getbootstrap.com" target="_blank">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2019" target="_blank">
+                        <i class="fas fa-server"></i>
+                        <h3>MSSQL</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://docs.docker.com/get-started/" target="_blank">
+                        <i class="fab fa-docker"></i>
+                        <h3>Docker</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://www.w3schools.com/nodejs/" target="_blank">
+                        <i class="fab fa-node"></i>
+                        <h3>Node.js</h3>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="https://expressjs.com/" target="_blank">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Express</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            Contact section
+            Linkedin, Github, Twitter and Gmail
+        -->
+        <section id="contact" class="text-center">
+            <h1 class="display-4">Contact</h1>
+            <hr>
+            <h4>samuelivan1999@gmail.com</h4>
+            <div class="col-12">
+                <a href="https://twitter.com/SamuelIvan1999" target="_blank"><i class="fab fa-twitter"
+                        aria-hidden="true"></i></a>
+                <a href="https://github.com/SamuelIvan99" target="_blank"><i class="fab fa-github"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/samuel-ivan-462836189/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://lichess.org/@/SamuelIvan99" target="_blank"><i class="fas fa-chess-knight"></i></a>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <p>Created by Samuel Ivan - Copyright &copy; 2021</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html lang="en">  
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Samuel Ivan">
+        <meta name="description" content="My personal portfolio">
+        <meta name="keywords" content="CV, projects, blog, skills">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>sPorts - Smart Ports</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="projects">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="../index.html#about-me">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../index.html#projects">Projects</a>
+                <a class="nav-item nav-link" href="../blog.html">Blog</a>
+                <a class="nav-item nav-link" href="../index.html#education">Education</a>
+                <a class="nav-item nav-link" href="../index.html#certifications">Certifications</a>
+                <a class="nav-item nav-link" href="../index.html#skills">Skills</a>
+                <a class="nav-item nav-link" href="../index.html#technology">Technologies</a>
+                <a class="nav-item nav-link" href="../index.html#contact">Contact</a>
+              </div>
+            </div>
+        </nav>
+
+        <section class="container margin-bottom">
+            <div class="col-12">
+                <div class="blog-section">
+                    <h1 class="display-4 text-center">sPorts - Smart Ports</h1>
+                    <hr>
+                    <h1> Introduction </h1>
+                    <p>
+                        Repository: <a href="https://github.com/BartoszUrban-UCN/sPorts" target="_blank">Github - sPorts Project</a> 
+                        <br>
+                        Collaborators: Bartosz Urban, Dragos Ionescu, Peter Hahn Boelt, Samuel Ivan, Zaharia Horatau-Hostiuc
+                    </p>
+                    <p> 
+                        In this articles I will talk a little bit about my 3rd semester project at UCN, where as part of a group of student developers,
+                        we have completed web client as well as desktop application that manages marinas
+                        for marina owners and boats for boat owners where boat owners are also able to book a
+                        specific marina with their boat using a map, place multiple orders in a shopping
+                        cart and lastly pay for them through payment gateway.    
+                    </p>
+                    <h1>Technologies</h1>
+                    <p>
+                        Regarding the technologies, we have used <em>ASP.NET Core framework</em> for this project with <em>Entity Framework</em> code first as our ORM (object
+                        relational mapper) for accessing our local version of MSSQL database. <em>xUnit</em> has been utilized as our testing tool mainly due to its easy way of using parameterised tests, hence taking
+                        advantage of inline data (writing one test method and supplying it with different data sets to test) and parallelism when running tests which is the default behaviour
+                        for xUnit. Our pages were generated using HTML, a little bit of CSS and some JavaScript. Regarding the development process, Scrum combined with XP have been used
+                        with Azure DevOps for managing our project.
+                    </p>
+                    <h2>Swagger</h2>
+                    <p>
+                        <em>Swawgger</em>, in form of Swashbuckle NuGet package in Visual Studio, has been applied to document our API, creating a nice overview with examples for our REST API methods.
+                    </p>
+                    <p>
+                        <img src="./sPortsPorject_images/Swagger-demo.png" alt="swagger documentation">
+                    </p>
+                    <h2>Electron.NET</h2>
+                    <p>
+                        <em>Electron.NET</em> was discovered as the best option to generate the dedicated client of our system with the least amount of effort. This framework simply
+                        converts the web client application written in HTML, CSS and JavaScript to desktop client using Chromium and Node.js.
+                    </p>
+                    <p>
+                        <img src="./sPortsPorject_images/electron-demo.png" alt="Electron.NET snapshot">
+                    </p>
+                    <h2>Leaflet JS</h2>
+                    <p>
+                        To be able to create an interactive map for our system <em>Leaflet JS</em> library was employed to solve this task. This open source library let us generate
+                        interactive maps, so that we could create marinas and spots in the marinas by clicking on the desired position on a map. 
+                    </p>
+                    <p>
+                        <img src="./sPortsPorject_images/Leaflet-demo.png" alt="Leaflet JS map snapshot">
+                    </p>
+                    <h2>Stripe.net</h2>
+                    <p>
+                        Lastly, for this project we also wanted to simulate the payment process for our users, hence the Stripe.net payment processor and payment gateway
+                        was used as a solution to this issue.
+                    </p>
+                    <p>
+                        <img src="./sPortsPorject_images/stripe-demo.png" alt="Stripe.net snapshot">
+                    </p>
+                    <h1> Conclusion </h1>
+                    <p>
+                        To sum it up, I really enjoyed working on this project with my group. It was very exciting to create the whole booking process for boat owners using different range
+                        of technologies in order to make it as real as possible. There are also many more features that has been implemented in the system like authentication and
+                        authorization of our users, creating different user groups (marina owner, boat owner, manager), sending email notifications with overview of 
+                        the customer's order in a text and pdf file, creating sessions in order to retain data in our shopping cart while the user is browsing the app, etc.
+                        For better overview, you can also try out our system by downloading the project from the Github repository referenced at the beginning. <br>
+                    </p>
+                    <h2>Demo</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="../assets/videos/sPortsDemo.mp4"></iframe>
+                    </div>
+                    <br>
+                    <p class="float-right"> 
+                        <em>Author: Samuel Ivan</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created by Samuel Ivan - Copyright &copy; 2021</p>
+        </footer>
+    </body>
+</html>
