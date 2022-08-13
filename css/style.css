@@ -295,7 +295,8 @@ hr {
 /* Skills section */
 .fa-github, .fa-twitter, .fa-linkedin, .fa-html5, .fa-css3, .fa-github, 
 .fa-twitter, .fa-trello, .fa-bootstrap, .fa-java, .fa-chess-knight, .fa-python, 
-.fa-database, .fa-js-square, .fa-code, .fa-tasks, .fa-server, .fa-docker, .fa-node, .fa-node-js {
+.fa-database, .fa-js-square, .fa-code, .fa-tasks, .fa-server, .fa-docker, .fa-node, 
+.fa-node-js, .fa-cloud {
     font-size: 50px !important;
     margin: 2rem;
 }
